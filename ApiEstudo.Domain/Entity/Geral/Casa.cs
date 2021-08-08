@@ -17,6 +17,7 @@ namespace ApiEstudo.Domain.Entity.Geral
         public bool Ativo { get; set; }
         public ICollection<UsuarioCasa> UsuarioCasas { get; set; }
         public ICollection<Mensagem> Mensagens { get; set; }
+        public int QuantidadePessoas => UsuarioCasas.Count;
 
         public Casa()
         {
